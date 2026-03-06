@@ -1,403 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SHERRYL VELOSO-PEÑAFLOR | AI Operations & Automation Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHERRYL VELOSO-PEÑAFLOR | AI Operations & Automation Portfolio</title>
 
-<style>
+  <style>
+    :root {
+      --bg: #f6efe6;
+      --card: #fffaf4;
+      --hero: #3b2416;
+      --text: #2f2218;
+      --text-soft: #6a5545;
+      --line: #d9c8b4;
+      --accent-light: #f3e4d7;
+      --accent-light-2: #ead7c7;
+      --shadow: 0 10px 28px rgba(70, 45, 28, 0.10);
+    }
 
-:root{
---bg:#f6efe6;
---bg-soft:#eadfce;
---card:#fffaf4;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
---text:#2f2218;
---text-soft:#6a5545;
+    html {
+      scroll-behavior: smooth;
+    }
 
---accent:#8a5a34;
---accent-dark:#5e3c24;
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      background-image: radial-gradient(
+        rgba(120, 90, 60, 0.04) 1px,
+        transparent 1px
+      );
+      background-size: 22px 22px;
+    }
 
---line:#d9c8b4;
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
---shadow:0 12px 32px rgba(70,45,28,0.12);
-}
+    a {
+      color: inherit;
+    }
 
-*{box-sizing:border-box;margin:0;padding:0;}
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-html{scroll-behavior:smooth;}
+    section {
+      padding: 72px 0;
+    }
 
-body{
-font-family:Arial, sans-serif;
-line-height:1.6;
-background:var(--bg);
-color:var(--text);
+    h1, h2, h3 {
+      color: var(--text);
+    }
 
-background-image:radial-gradient(
-rgba(120,90,60,0.04) 1px,
-transparent 1px
-);
-background-size:22px 22px;
-}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
 
-img{max-width:100%;display:block;}
+    .section-intro {
+      max-width: 760px;
+      color: var(--text-soft);
+      margin-bottom: 28px;
+    }
 
-.container{
-width:100%;
-max-width:1100px;
-margin:0 auto;
-padding:0 20px;
-}
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
 
-header{
-background:linear-gradient(135deg,#e6d4bf,#cbb095);
-padding:88px 20px 72px;
-text-align:center;
-border-bottom:1px solid var(--line);
-}
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
 
-header h1{
-font-size:2.9rem;
-margin-bottom:12px;
-font-weight:700;
-letter-spacing:-0.02em;
-}
+    .btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      border: 1px solid #e2d2c3;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: 0.2s ease;
+    }
 
-header .subtitle{
-font-size:1.08rem;
-font-weight:700;
-margin-bottom:14px;
-color:var(--accent-dark);
-}
+    .btn-primary {
+      background: var(--accent-light);
+      color: var(--hero);
+    }
 
-header .intro{
-max-width:780px;
-margin:0 auto;
-font-size:1rem;
-color:var(--text-soft);
-}
+    .btn-primary:hover {
+      background: var(--accent-light-2);
+    }
 
-.hero-buttons{
-margin-top:28px;
-display:flex;
-gap:12px;
-justify-content:center;
-flex-wrap:wrap;
-}
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--hero);
+    }
 
-.btn{
-display:inline-block;
-padding:12px 18px;
-border-radius:999px;
-text-decoration:none;
-font-weight:700;
-transition:0.2s ease;
-border:1px solid transparent;
-}
+    .btn-secondary:hover {
+      background: var(--accent-light);
+    }
 
-.btn-primary{
-background:var(--accent);
-color:#fff;
-}
+    /* HERO */
+    header {
+      background: var(--hero);
+      color: white;
+      text-align: center;
+      padding: 96px 20px 80px;
+    }
 
-.btn-primary:hover{
-background:var(--accent-dark);
-box-shadow:0 6px 16px rgba(94,60,36,0.18);
-}
+    header h1 {
+      color: white;
+      font-size: 2.9rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
 
-.btn-secondary{
-background:transparent;
-color:var(--accent-dark);
-border-color:var(--accent-dark);
-}
+    .subtitle {
+      color: #ead7c7;
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
 
-.btn-secondary:hover{
-background:rgba(124,82,48,0.08);
-}
+    .intro {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #f2e8df;
+      font-size: 1rem;
+    }
 
-.badge-row{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:24px;
-justify-content:center;
-}
+    .hero-buttons {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-.badge{
-background:rgba(255,253,249,0.9);
-border:1px solid var(--line);
-color:var(--accent-dark);
-padding:8px 12px;
-border-radius:999px;
-font-size:0.92rem;
-font-weight:600;
-}
+    /* NAV */
+    nav {
+      background: rgba(255, 250, 244, 0.96);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
 
-nav{
-background:rgba(255,253,249,0.95);
-border-bottom:1px solid var(--line);
-position:sticky;
-top:0;
-z-index:100;
-backdrop-filter:blur(8px);
-}
+    nav .container {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      padding: 14px 20px;
+    }
 
-nav .container{
-display:flex;
-justify-content:center;
-gap:22px;
-padding:14px 20px;
-flex-wrap:wrap;
-}
+    nav a {
+      text-decoration: none;
+      font-weight: 700;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+    }
 
-nav a{
-text-decoration:none;
-color:var(--text-soft);
-font-size:0.95rem;
-font-weight:700;
-}
+    nav a:hover {
+      color: var(--hero);
+    }
 
-nav a:hover{color:var(--accent-dark);}
+    /* ABOUT */
+    .about-wrap {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
 
-section{
-padding:74px 0;
-position:relative;
-}
+    .about-photo {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: #eadccc;
+    }
 
-section::after{
-content:"";
-position:absolute;
-bottom:0;
-left:50%;
-width:60px;
-height:2px;
-background:var(--line);
-transform:translateX(-50%);
-opacity:0.4;
-}
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
 
-h2{font-size:2rem;margin-bottom:16px;}
+    .about-copy h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
 
-.section-intro{
-max-width:760px;
-margin-bottom:28px;
-color:var(--text-soft);
-}
+    .about-copy p {
+      color: var(--text-soft);
+      margin-bottom: 12px;
+    }
 
-.card,.about-panel{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:22px;
-box-shadow:var(--shadow);
-padding:24px;
-}
+    /* CONTACT */
+    .contact-list p {
+      margin-bottom: 10px;
+      color: var(--text-soft);
+    }
 
-.grid-3{
-display:grid;
-gap:20px;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-}
+    .contact-actions {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-.about-panel{
-display:grid;
-grid-template-columns:260px 1fr;
-gap:28px;
-align-items:center;
-background:linear-gradient(180deg,#fffdf9,#f9f2ea);
-}
+    footer {
+      text-align: center;
+      padding: 36px 20px 48px;
+      border-top: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 0.92rem;
+    }
 
-.about-photo{
-width:100%;
-max-width:240px;
-aspect-ratio:1/1;
-border-radius:22px;
-overflow:hidden;
-border:1px solid var(--line);
-}
+    @media (max-width: 800px) {
+      .about-wrap {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
 
-.about-photo img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
+      .about-photo {
+        max-width: 260px;
+        margin: 0 auto;
+      }
+    }
 
-.about-copy h3{
-font-size:1.25rem;
-margin-bottom:12px;
-}
+    @media (max-width: 640px) {
+      header {
+        padding: 72px 20px 62px;
+      }
 
-.about-copy p{
-color:var(--text-soft);
-margin-bottom:12px;
-}
+      header h1 {
+        font-size: 2.15rem;
+      }
 
-.accent{
-color:var(--accent-dark);
-font-weight:700;
-}
-
-footer{
-padding:34px 20px 52px;
-text-align:center;
-color:var(--text-soft);
-font-size:0.92rem;
-border-top:1px solid var(--line);
-}
-
-@media(max-width:800px){
-.about-panel{
-grid-template-columns:1fr;
-text-align:center;
-}
-.about-photo{margin:0 auto;}
-}
-
-</style>
+      h2 {
+        font-size: 1.65rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<div class="container">
+  <header>
+    <div class="container">
+      <h1>SHERRYL VELOSO-PEÑAFLOR</h1>
+      <p class="subtitle">AI Operations • Workflow Systems • Automation Support</p>
+      <p class="intro">
+        I help fast-moving founders organize operations, structure workflows, and execute ideas faster using systems thinking, automation logic, and AI-assisted productivity.
+      </p>
 
-<h1>SHERRYL VELOSO-PEÑAFLOR</h1>
-<p class="subtitle">AI Operations, Workflow & Automation Support</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">About Me</a>
+        <a href="mailto:smallsteps@tinyteamstudio.online" class="btn btn-secondary">Primary Email</a>
+        <a href="mailto:chinveloso.consmaterials@gmail.com" class="btn btn-secondary">Alternative Email</a>
+      </div>
+    </div>
+  </header>
 
-<p class="intro">
-I help fast-moving founders organize operations, reduce overload, and execute ideas faster using systems, workflow design, AI-assisted productivity, and practical automation thinking.
-</p>
+  <nav>
+    <div class="container">
+      <a href="#about">About</a>
+      <a href="#systems">Systems</a>
+      <a href="#tools">Tools</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<div class="hero-buttons">
-<a class="btn btn-primary" href="#systems">View Systems</a>
-<a class="btn btn-secondary" href="mailto:smallsteps@tinyteamstudio.online">Email Me</a>
-</div>
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="section-intro">
+        I build structured digital systems that support operations, workflow clarity, and faster execution.
+      </p>
 
-<div class="badge-row">
-<span class="badge">Google Sheets</span>
-<span class="badge">Apps Script</span>
-<span class="badge">GitHub</span>
-<span class="badge">GitLab</span>
-<span class="badge">Python</span>
-<span class="badge">VS Code</span>
-<span class="badge">AI-Assisted Workflows</span>
-</div>
+      <div class="about-wrap">
+        <div class="about-photo">
+          <img src="assets/images/projects/chin-veloso-about.png" alt="Sherryl Veloso-Peñaflor">
+        </div>
 
-</div>
-</header>
+        <div class="about-copy">
+          <h3>Operations-focused and workflow-minded</h3>
+          <p>
+            My work focuses on organizing information, structuring digital processes, and turning ideas into clear systems that are easier to manage and execute.
+          </p>
+          <p>
+            I can support websites, workflow systems, digital organization, automation-ready structures, and AI-assisted productivity for founders and teams that need cleaner operations.
+          </p>
+          <p>
+            I do not just build pages. I help shape the digital system behind the work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<nav>
-<div class="container">
-<a href="#about">About</a>
-<a href="#help">What I Help With</a>
-<a href="#systems">Selected Systems</a>
-<a href="#tools">Tools</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
+  <section id="systems">
+    <div class="container">
+      <h2>Selected Systems</h2>
+      <p class="section-intro">
+        This section will contain the real systems and workflows I built across booking, membership, content, e-commerce, and service operations.
+      </p>
 
-<section id="about">
-<div class="container">
+      <div class="card">
+        <p style="color: var(--text-soft);">
+          Project screenshots and workflows will be placed here next.
+        </p>
+      </div>
+    </div>
+  </section>
 
-<h2>About Me</h2>
+  <section id="tools">
+    <div class="container">
+      <h2>Tools</h2>
+      <p class="section-intro">
+        Google Sheets, Google Apps Script, Python, VS Code, GitHub, GitLab, AI-assisted workflows, website structure, and digital operations support.
+      </p>
+    </div>
+  </section>
 
-<p class="section-intro">
-I build practical systems for operations, follow-up, tracking, approvals, execution support, and workflow organization.
-</p>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="section-intro">
+        Available for roles focused on organized operations, workflow support, and digital execution.
+      </p>
 
-<div class="about-panel">
+      <div class="card contact-list">
+        <p><strong>Name:</strong> Sherryl Veloso-Peñaflor</p>
+        <p><strong>Primary Email:</strong> smallsteps@tinyteamstudio.online</p>
+        <p><strong>Alternative Email:</strong> chinveloso.consmaterials@gmail.com</p>
+        <p>
+          <strong>Portfolio:</strong>
+          <a href="https://chinvelosoconsmaterials-debug.github.io/chinvelosoportfolio.github.io/" target="_blank">
+            chinvelosoconsmaterials-debug.github.io/chinvelosoportfolio.github.io/
+          </a>
+        </p>
 
-<div class="about-photo">
-<img src="assets/profile/profile-chin-veloso.png" alt="Sherryl Veloso-Peñaflor">
-</div>
+        <div class="contact-actions">
+          <a href="mailto:smallsteps@tinyteamstudio.online" class="btn btn-primary">Email Me</a>
+          <a href="mailto:chinveloso.consmaterials@gmail.com" class="btn btn-secondary">Alternative Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="about-copy">
-
-<h3>Warm, reliable, and systems-minded support</h3>
-
-<p>
-I am especially interested in helping startups that move quickly but need <span class="accent">more structure, cleaner handoffs, stronger follow-through, and faster execution</span>.
-</p>
-
-<p>
-I work best where operations need organizing, repetitive tasks need simplifying, and ideas need a clearer path from concept to action.
-</p>
-
-</div>
-</div>
-</div>
-</section>
-
-<section id="help">
-<div class="container">
-<h2>What I Help With</h2>
-
-<div class="grid-3">
-
-<div class="card">
-<h3>Organized Operations</h3>
-<p>Turn scattered moving parts into clear systems, task flows, and documented processes.</p>
-</div>
-
-<div class="card">
-<h3>AI-Driven Productivity</h3>
-<p>Use AI tools to accelerate drafting, analysis, and daily operational work.</p>
-</div>
-
-<div class="card">
-<h3>Faster Execution</h3>
-<p>Help founders move ideas into action through workflow mapping and structured execution.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="tools">
-<div class="container">
-<h2>Tools</h2>
-
-<div class="grid-3">
-
-<div class="card">
-<h3>Google Tools</h3>
-<p>Sheets, Docs, Forms, Drive organization</p>
-</div>
-
-<div class="card">
-<h3>Automation</h3>
-<p>Google Apps Script, workflow design, process mapping</p>
-</div>
-
-<div class="card">
-<h3>Development</h3>
-<p>Python, VS Code, GitHub, GitLab</p>
-</div>
-
-</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-
-<h2>Contact</h2>
-
-<div class="card">
-<p><strong>Name:</strong> Sherryl Veloso-Peñaflor</p>
-<p><strong>Email:</strong> smallsteps@tinyteamstudio.online</p>
-<p><strong>Location:</strong> Philippines / Remote</p>
-
-<div style="margin-top:18px;">
-<a class="btn btn-primary" href="mailto:smallsteps@tinyteamstudio.online">Email Me</a>
-</div>
-
-</div>
-</div>
-</section>
-
-<footer>
-© 2026 Sherryl Veloso-Peñaflor | AI Operations & Automation Portfolio
-</footer>
+  <footer>
+    © 2026 Sherryl Veloso-Peñaflor | AI Operations & Automation Portfolio
+  </footer>
 
 </body>
 </html>
