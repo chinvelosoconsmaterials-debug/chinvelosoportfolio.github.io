@@ -84,10 +84,27 @@ padding:24px;
 color:var(--text-soft);
 }
 
-.grid-2{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:24px;
+.grid-2 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 24px;
+}
+
+/* TOOLS GRID (3 columns) */
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 24px;
+margin-top: 24px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+
+.grid-3 {
+grid-template-columns: 1fr;
+}
+
 }
 
 .grid-3{
